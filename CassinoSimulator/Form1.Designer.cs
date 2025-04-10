@@ -34,6 +34,8 @@
             this.lblN1 = new System.Windows.Forms.Label();
             this.lblN2 = new System.Windows.Forms.Label();
             this.lblN3 = new System.Windows.Forms.Label();
+            this.rtbLastests = new System.Windows.Forms.RichTextBox();
+            this.cbWins = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tmrSpin
@@ -88,19 +90,43 @@
             this.lblN3.Text = "0";
             this.lblN3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // rtbLastests
+            // 
+            this.rtbLastests.Location = new System.Drawing.Point(118, 352);
+            this.rtbLastests.Name = "rtbLastests";
+            this.rtbLastests.Size = new System.Drawing.Size(100, 96);
+            this.rtbLastests.TabIndex = 6;
+            this.rtbLastests.Text = "";
+            this.rtbLastests.TextChanged += new System.EventHandler(this.rtbLastests_TextChanged);
+            // 
+            // cbWins
+            // 
+            this.cbWins.AutoSize = true;
+            this.cbWins.Location = new System.Drawing.Point(12, 377);
+            this.cbWins.Name = "cbWins";
+            this.cbWins.Size = new System.Drawing.Size(80, 17);
+            this.cbWins.TabIndex = 7;
+            this.cbWins.Text = "checkBox1";
+            this.cbWins.UseVisualStyleBackColor = true;
+            this.cbWins.CheckedChanged += new System.EventHandler(this.cbWins_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(336, 359);
+            this.ClientSize = new System.Drawing.Size(336, 555);
+            this.Controls.Add(this.cbWins);
+            this.Controls.Add(this.rtbLastests);
             this.Controls.Add(this.lblN3);
             this.Controls.Add(this.lblN2);
             this.Controls.Add(this.lblN1);
             this.Controls.Add(this.BtnSpin);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -111,6 +137,8 @@
         private System.Windows.Forms.Label lblN1;
         private System.Windows.Forms.Label lblN2;
         private System.Windows.Forms.Label lblN3;
+        private System.Windows.Forms.RichTextBox rtbLastests;
+        private System.Windows.Forms.CheckBox cbWins;
     }
 }
 

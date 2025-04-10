@@ -82,6 +82,34 @@ namespace CassinoSimulator
                 tmrSpin.Enabled = false;
                 BtnSpin.Enabled = true;
                 verifyWin();
+
+                rtbLastests.cycles.Add($"{roulette[0]}-{roulette[1]}-{roulette[2]}");
+            }
+
+        }
+
+        private void rtbLastests_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        List<string> jogadas;
+        private void cbWins_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbWins.Checked)
+            {
+                jogadas = new List<string>();
+                foreach (string item in rtbLastests.Items)
+                {
+                    jogadas.Add(item);
+                }
+
+                rtbLastests.Items.Clear();
+                foreach (string item in jogadas)
+                {
+                    string[] nums = item.Split('-');
+                    if (nums[0] == nums[1] && nums[1] == nums[2])
+                        rtbLastests.Items.Add(item);
+                }
             }
         }
     }
