@@ -34,8 +34,8 @@
             this.lblN1 = new System.Windows.Forms.Label();
             this.lblN2 = new System.Windows.Forms.Label();
             this.lblN3 = new System.Windows.Forms.Label();
-            this.rtbLastests = new System.Windows.Forms.RichTextBox();
-            this.cbWins = new System.Windows.Forms.CheckBox();
+            this.lbxUltimos = new System.Windows.Forms.ListBox();
+            this.chbVitorias = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tmrSpin
@@ -90,25 +90,28 @@
             this.lblN3.Text = "0";
             this.lblN3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rtbLastests
+            // lbxUltimos
             // 
-            this.rtbLastests.Location = new System.Drawing.Point(118, 352);
-            this.rtbLastests.Name = "rtbLastests";
-            this.rtbLastests.Size = new System.Drawing.Size(100, 96);
-            this.rtbLastests.TabIndex = 6;
-            this.rtbLastests.Text = "";
-            this.rtbLastests.TextChanged += new System.EventHandler(this.rtbLastests_TextChanged);
+            this.lbxUltimos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxUltimos.FormattingEnabled = true;
+            this.lbxUltimos.ItemHeight = 25;
+            this.lbxUltimos.Location = new System.Drawing.Point(30, 352);
+            this.lbxUltimos.Name = "lbxUltimos";
+            this.lbxUltimos.Size = new System.Drawing.Size(272, 154);
+            this.lbxUltimos.TabIndex = 4;
             // 
-            // cbWins
+            // chbVitorias
             // 
-            this.cbWins.AutoSize = true;
-            this.cbWins.Location = new System.Drawing.Point(12, 377);
-            this.cbWins.Name = "cbWins";
-            this.cbWins.Size = new System.Drawing.Size(80, 17);
-            this.cbWins.TabIndex = 7;
-            this.cbWins.Text = "checkBox1";
-            this.cbWins.UseVisualStyleBackColor = true;
-            this.cbWins.CheckedChanged += new System.EventHandler(this.cbWins_CheckedChanged);
+            this.chbVitorias.AutoSize = true;
+            this.chbVitorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbVitorias.ForeColor = System.Drawing.Color.White;
+            this.chbVitorias.Location = new System.Drawing.Point(90, 515);
+            this.chbVitorias.Name = "chbVitorias";
+            this.chbVitorias.Size = new System.Drawing.Size(160, 28);
+            this.chbVitorias.TabIndex = 5;
+            this.chbVitorias.Text = "Apenas Vitórias";
+            this.chbVitorias.UseVisualStyleBackColor = true;
+            this.chbVitorias.CheckedChanged += new System.EventHandler(this.chbVitorias_CheckedChanged);
             // 
             // Form1
             // 
@@ -116,8 +119,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(336, 555);
-            this.Controls.Add(this.cbWins);
-            this.Controls.Add(this.rtbLastests);
+            this.Controls.Add(this.chbVitorias);
+            this.Controls.Add(this.lbxUltimos);
             this.Controls.Add(this.lblN3);
             this.Controls.Add(this.lblN2);
             this.Controls.Add(this.lblN1);
@@ -137,8 +140,8 @@
         private System.Windows.Forms.Label lblN1;
         private System.Windows.Forms.Label lblN2;
         private System.Windows.Forms.Label lblN3;
-        private System.Windows.Forms.RichTextBox rtbLastests;
-        private System.Windows.Forms.CheckBox cbWins;
+        private System.Windows.Forms.ListBox lbxUltimos;
+        private System.Windows.Forms.CheckBox chbVitorias;
     }
 }
 

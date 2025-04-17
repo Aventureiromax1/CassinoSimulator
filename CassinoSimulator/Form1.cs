@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CassinoSimulator
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         int[] roulette;
         int[] cycles;
@@ -54,6 +54,17 @@ namespace CassinoSimulator
                 lblN3.ForeColor = Color.Green;
                 MessageBox.Show("VOCE GANHOU!!!!");
             }
+            else
+            {
+                if (chbVitorias.Checked)
+                {
+                    jogadas.Add($"{roulette[0]}-{roulette[1]}-{roulette[2]}");
+                }
+                else
+                {
+                    lbxUltimos.Items.Add($"{roulette[0]}-{roulette[1]}-{roulette[2]}");
+                }
+            }
         }
 
         private void tmrSpin_Tick(object sender, EventArgs e)
@@ -82,35 +93,39 @@ namespace CassinoSimulator
                 tmrSpin.Enabled = false;
                 BtnSpin.Enabled = true;
                 verifyWin();
-
-                rtbLastests.cycles.Add($"{roulette[0]}-{roulette[1]}-{roulette[2]}");
             }
 
         }
 
-        private void rtbLastests_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
         List<string> jogadas;
-        private void cbWins_CheckedChanged(object sender, EventArgs e)
+        private void chbVitorias_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWins.Checked)
+            if (chbVitorias.Checked)
             {
                 jogadas = new List<string>();
-                foreach (string item in rtbLastests.Items)
+                foreach (string item in lbxUltimos.Items)
                 {
                     jogadas.Add(item);
                 }
 
-                rtbLastests.Items.Clear();
+                lbxUltimos.Items.Clear();
                 foreach (string item in jogadas)
                 {
                     string[] nums = item.Split('-');
                     if (nums[0] == nums[1] && nums[1] == nums[2])
-                        rtbLastests.Items.Add(item);
+                        lbxUltimos.Items.Add(item);
                 }
+            }
+            else
+            {
+                lbxUltimos.Items.Clear();
+                foreach (string item in jogadas)
+                {
+                    lbxUltimos.Items.Add(item);
+                }
+
             }
         }
     }
 }
+
