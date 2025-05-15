@@ -99,6 +99,7 @@
             this.lbxUltimos.Name = "lbxUltimos";
             this.lbxUltimos.Size = new System.Drawing.Size(272, 154);
             this.lbxUltimos.TabIndex = 4;
+            this.lbxUltimos.TabStop = false;
             // 
             // chbVitorias
             // 
@@ -108,7 +109,7 @@
             this.chbVitorias.Location = new System.Drawing.Point(90, 515);
             this.chbVitorias.Name = "chbVitorias";
             this.chbVitorias.Size = new System.Drawing.Size(160, 28);
-            this.chbVitorias.TabIndex = 5;
+            this.chbVitorias.TabIndex = 1;
             this.chbVitorias.Text = "Apenas &Vitórias";
             this.chbVitorias.UseVisualStyleBackColor = true;
             this.chbVitorias.CheckedChanged += new System.EventHandler(this.chbVitorias_CheckedChanged);
