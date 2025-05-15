@@ -50,7 +50,7 @@
             this.BtnSpin.Name = "BtnSpin";
             this.BtnSpin.Size = new System.Drawing.Size(312, 87);
             this.BtnSpin.TabIndex = 0;
-            this.BtnSpin.Text = "Girar";
+            this.BtnSpin.Text = "&Girar";
             this.BtnSpin.UseVisualStyleBackColor = true;
             this.BtnSpin.Click += new System.EventHandler(this.BtnSpin_Click);
             // 
@@ -109,7 +109,7 @@
             this.chbVitorias.Name = "chbVitorias";
             this.chbVitorias.Size = new System.Drawing.Size(160, 28);
             this.chbVitorias.TabIndex = 5;
-            this.chbVitorias.Text = "Apenas Vitórias";
+            this.chbVitorias.Text = "Apenas &Vitórias";
             this.chbVitorias.UseVisualStyleBackColor = true;
             this.chbVitorias.CheckedChanged += new System.EventHandler(this.chbVitorias_CheckedChanged);
             // 
